@@ -10,8 +10,10 @@ angular.module('marketCheck.services', [])
         
     $http.get(url)
         .success(function(json) {
-            var jsonData = json.query.results.quote;
-            deferred.resolve(jsonData); 
+            //var jsonData = json.query.results.quote;
+            console.log(json);
+            //deferred.resolve(jsonData);
+             
         })
         .error(function(error){
             console.log("Details data error: " + error);
