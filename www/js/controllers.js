@@ -75,7 +75,7 @@ angular.module('marketCheck.controllers', [])
             
             promise.then(function(data) {
                 console.log(data);
-                $scope.getPriceData = data;
+                $scope.stockPriceData = data;
             });
             
         };
@@ -86,7 +86,7 @@ angular.module('marketCheck.controllers', [])
             
             promise.then(function(data) {
                 console.log(data);
-                $scope.getDetailsData = data;
+                $scope.stockDetailsData = data;
             });
             
         };
