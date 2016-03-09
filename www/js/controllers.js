@@ -63,11 +63,16 @@ angular.module('marketCheck.controllers', [])
     function($scope, $stateParams, stockDataService) {
                 
         $scope.ticker = $stateParams.stockTicker;
+        $scope.chartView = 1;
         
         $scope.$on("$ionicView.afterEnter", function() {
             getPriceData();
             getDetailsData();
         });
+        
+        $scope.chartViewFunc = function (n) {
+            $scope.chartView = n;
+        }
         
         function getPriceData() {
         
